@@ -1,0 +1,58 @@
+.menu{
+    display: flex;
+    align-items: center;
+    gap : 0 35px;
+
+    &-toggle{
+        display: none;
+        font-size: 25px;
+        color: black;
+    }
+
+    &-link{
+        color: inherit;
+        font-weight: 400;
+        &:hover{
+            color: $gray-darkest;
+            font-weight: 500;
+        }
+    }
+
+    @media screen and (max-width: 1023px) {
+        position: fixed;
+        top:0;
+        right: 0;
+        bottom: 0;
+        background-color: white;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        width: 300px;
+        flex-direction: column;
+        z-index: 9;
+        transition: all 0.25s linear;
+        transform: translateX(100%);
+
+
+        &.is-show{
+            transform: translateX(0);
+        }
+        &-item{
+            text-align: center;
+            display: block;
+            padding:15px;
+            width: 100%;
+        }
+
+
+        .btn{
+            width: 100%;
+        }
+
+        &-toggle{
+            display: block;
+
+        }
+    }
+
+
+}
+
